@@ -1,1 +1,1 @@
-Happy birthday gift source code for my lovely girlfriend
+Happy birthday gift animation source code for my lovely girlfriend
