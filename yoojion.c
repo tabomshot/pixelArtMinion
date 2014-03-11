@@ -29,10 +29,14 @@ void draw(int fnum)
                     //printf("\x1b[47m%c%c\x1b[0m", ' ', ' ');
                     printf("\033[48;5;15m%c%c\033[48;5;0m", ' ', ' ');
                     break;
-                case '-': case '@': case '^':
+                case '^': // case '@': case '-':
                     printf("\x1b[40m%c%c\x1b[0m", ' ', ' ');
                     //printf("\033[0;40;33m%c\x1b[0m", ' ');
                     break;
+				case '@': case '-': // hair
+                    printf("\033[48;5;0m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+
                 case '*':
 				case 'A': case 'y': case 'i':// yellow
                     printf("\x1b[43m%c%c\x1b[0m", ' ', ' ');
