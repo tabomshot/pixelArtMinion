@@ -11,7 +11,7 @@ void draw(int fnum)
 
 	switch(fnum) {
 		case 0:
-			cframe = frame01;
+			cframe = frame10;
 			break;
 		case 1:
 			cframe = frame11;
@@ -26,7 +26,8 @@ void draw(int fnum)
             switch(cframe[i][j]) {
 				// minion body
                 case ',': case '%': case '(':
-                    printf("\x1b[47m%c%c\x1b[0m", ' ', ' ');
+                    //printf("\x1b[47m%c%c\x1b[0m", ' ', ' ');
+                    printf("\033[48;5;15m%c%c\033[48;5;0m", ' ', ' ');
                     break;
                 case '-': case '@': case '^':
                     printf("\x1b[40m%c%c\x1b[0m", ' ', ' ');
@@ -57,6 +58,26 @@ void draw(int fnum)
 				case 'P': case 'R':
 				case 'b': case 't': // green
                     printf("\x1b[42m%c%c\x1b[0m", ' ', ' ');
+					break;
+
+				// flower with xterm-256
+				case '0':
+                    printf("\033[48;5;226m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+				case '1':
+                    printf("\033[48;5;220m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+				case '2':
+                    printf("\033[48;5;213m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+				case '3':
+                    printf("\033[48;5;219m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+				case '5':
+                    printf("\033[48;5;225m%c%c\033[48;5;0m", ' ', ' ');
+					break;
+				case '9':
+                    printf("\033[48;5;15m%c%c\033[48;5;0m", ' ', ' ');
 					break;
             }
         }
